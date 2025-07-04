@@ -1,1 +1,8 @@
-
+*.exe
+*.obj
+*.dll
+*.pdb
+*.sdf
+*.vcxproj*
+*.vscode/
+*.DS_Store
