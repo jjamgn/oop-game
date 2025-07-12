@@ -1,0 +1,26 @@
+[
+{
+  "directory": "E:/NLTT/DAIHOC/OOP/oop-game/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/SFML/SFML-3.0.0/include -IE:/NLTT/DAIHOC/OOP/oop-game/src -g -std=gnu++17 -o CMakeFiles\\game.dir\\src\\Bullet.cpp.obj -c E:\\NLTT\\DAIHOC\\OOP\\oop-game\\src\\Bullet.cpp",
+  "file": "E:\\NLTT\\DAIHOC\\OOP\\oop-game\\src\\Bullet.cpp",
+  "output": "CMakeFiles\\game.dir\\src\\Bullet.cpp.obj"
+},
+{
+  "directory": "E:/NLTT/DAIHOC/OOP/oop-game/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/SFML/SFML-3.0.0/include -IE:/NLTT/DAIHOC/OOP/oop-game/src -g -std=gnu++17 -o CMakeFiles\\game.dir\\src\\Enemy.cpp.obj -c E:\\NLTT\\DAIHOC\\OOP\\oop-game\\src\\Enemy.cpp",
+  "file": "E:\\NLTT\\DAIHOC\\OOP\\oop-game\\src\\Enemy.cpp",
+  "output": "CMakeFiles\\game.dir\\src\\Enemy.cpp.obj"
+},
+{
+  "directory": "E:/NLTT/DAIHOC/OOP/oop-game/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/SFML/SFML-3.0.0/include -IE:/NLTT/DAIHOC/OOP/oop-game/src -g -std=gnu++17 -o CMakeFiles\\game.dir\\src\\Player.cpp.obj -c E:\\NLTT\\DAIHOC\\OOP\\oop-game\\src\\Player.cpp",
+  "file": "E:\\NLTT\\DAIHOC\\OOP\\oop-game\\src\\Player.cpp",
+  "output": "CMakeFiles\\game.dir\\src\\Player.cpp.obj"
+},
+{
+  "directory": "E:/NLTT/DAIHOC/OOP/oop-game/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/SFML/SFML-3.0.0/include -IE:/NLTT/DAIHOC/OOP/oop-game/src -g -std=gnu++17 -o CMakeFiles\\game.dir\\src\\PlayerBullet.cpp.obj -c E:\\NLTT\\DAIHOC\\OOP\\oop-game\\src\\PlayerBullet.cpp",
+  "file": "E:\\NLTT\\DAIHOC\\OOP\\oop-game\\src\\PlayerBullet.cpp",
+  "output": "CMakeFiles\\game.dir\\src\\PlayerBullet.cpp.obj"
+}
+]
