@@ -1,11 +1,18 @@
 # ninja log v6
-19	43	7740320962100399	E:/NLTT/DAIHOC/OOP/oop-game/build/CMakeFiles/cmake.verify_globs	31513309d67880b0
-44	1005	7740319702336533	CMakeFiles/game.dir/src/Player.cpp.obj	d2c5afcc94248d71
-34	750	7740161588242062	CMakeFiles/game.dir/src/main.cpp.obj	bc125d0dfeeebca7
-43	798	7740320574412831	CMakeFiles/game.dir/src/Bullet.cpp.obj	3bc2bc18ecf61d29
-46	860	7740320962366068	CMakeFiles/game.dir/src/Enemy.cpp.obj	55f97a0a35e8037a
-16	44	7740333121876575	E:/NLTT/DAIHOC/OOP/oop-game/build/CMakeFiles/cmake.verify_globs	31513309d67880b0
+77	196	7747362493061768	CMakeFiles/game.dir/src/AirPlane.cpp.obj	63dd39d51532c78c
+81	1153	7747362493079261	CMakeFiles/game.dir/src/MineTrap.cpp.obj	d4bfec677392f91d
+65	656	7747370951460603	build.ninja	245ec79642f75bf1
+12	33	7747370947750710	E:/NLTT/DAIHOC/OOP/oop-game/build/CMakeFiles/cmake.verify_globs	31513309d67880b0
 55	136	7740333122342070	CMakeFiles/game.dir/src/PlayerBullet.cpp.obj	7f7c8810efe53531
-50	919	7740333122288233	CMakeFiles/game.dir/src/Enemy.cpp.obj	55f97a0a35e8037a
-47	926	7740333122265205	CMakeFiles/game.dir/src/Bullet.cpp.obj	3bc2bc18ecf61d29
-53	977	7740333122316955	CMakeFiles/game.dir/src/Player.cpp.obj	d2c5afcc94248d71
+65	656	7747370951430384	E:/NLTT/DAIHOC/OOP/oop-game/build/cmake_install.cmake	245ec79642f75bf1
+57	997	7747140763769044	CMakeFiles/game.dir/src/Player.cpp.obj	4d7f6c536a551251
+34	750	7740161588242062	CMakeFiles/game.dir/src/main.cpp.obj	bc125d0dfeeebca7
+46	980	7747140763671717	CMakeFiles/game.dir/src/Bullet.cpp.obj	dcaf84a21f20bee8
+50	1088	7747333173636672	CMakeFiles/game.dir/src/GameObject.cpp.obj	af4d911533c68245
+43	823	7747343436786914	CMakeFiles/game.dir/src/Enemy.cpp.obj	c0d4e6bc599d2cbe
+89	1156	7747362493174674	CMakeFiles/game.dir/src/TankEnemy.cpp.obj	f06ef702af7e7939
+33	473	7747370951460603	build.ninja	245ec79642f75bf1
+33	473	7747370951460603	E:/NLTT/DAIHOC/OOP/oop-game/build/cmake_install.cmake	245ec79642f75bf1
+20	47	7747370952403207	E:/NLTT/DAIHOC/OOP/oop-game/build/CMakeFiles/cmake.verify_globs	31513309d67880b0
+53	114	7747370952728533	CMakeFiles/game.dir/src/ArmoredTank.cpp.obj	821e5c4206d91db3
+17	38	7747371155225593	E:/NLTT/DAIHOC/OOP/oop-game/build/CMakeFiles/cmake.verify_globs	31513309d67880b0

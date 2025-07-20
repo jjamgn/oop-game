@@ -3,6 +3,8 @@ project(OOPGame)
 
 set(CMAKE_CXX_STANDARD 17)
 
+include_directories(include)
+
 # Thêm include path cho SFML
 include_directories("C:/SFML/SFML-3.0.0/include")  # hoặc dùng target_include_directories
 

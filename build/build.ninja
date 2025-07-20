@@ -49,11 +49,27 @@ cmake_ninja_workdir = E$:/NLTT/DAIHOC/OOP/oop-game/build/
 
 build cmake_object_order_depends_target_game: phony || .
 
+build CMakeFiles/game.dir/src/AirPlane.cpp.obj: CXX_COMPILER__game_unscanned_Debug E$:/NLTT/DAIHOC/OOP/oop-game/src/AirPlane.cpp || cmake_object_order_depends_target_game
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\game.dir\src\AirPlane.cpp.obj.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -IE:/NLTT/DAIHOC/OOP/oop-game/include -IC:/SFML/SFML-3.0.0/include -IE:/NLTT/DAIHOC/OOP/oop-game/src
+  OBJECT_DIR = CMakeFiles\game.dir
+  OBJECT_FILE_DIR = CMakeFiles\game.dir\src
+
+build CMakeFiles/game.dir/src/ArmoredTank.cpp.obj: CXX_COMPILER__game_unscanned_Debug E$:/NLTT/DAIHOC/OOP/oop-game/src/ArmoredTank.cpp || cmake_object_order_depends_target_game
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\game.dir\src\ArmoredTank.cpp.obj.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -IE:/NLTT/DAIHOC/OOP/oop-game/include -IC:/SFML/SFML-3.0.0/include -IE:/NLTT/DAIHOC/OOP/oop-game/src
+  OBJECT_DIR = CMakeFiles\game.dir
+  OBJECT_FILE_DIR = CMakeFiles\game.dir\src
+
 build CMakeFiles/game.dir/src/Bullet.cpp.obj: CXX_COMPILER__game_unscanned_Debug E$:/NLTT/DAIHOC/OOP/oop-game/src/Bullet.cpp || cmake_object_order_depends_target_game
   CONFIG = Debug
   DEP_FILE = CMakeFiles\game.dir\src\Bullet.cpp.obj.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -IC:/SFML/SFML-3.0.0/include -IE:/NLTT/DAIHOC/OOP/oop-game/src
+  INCLUDES = -IE:/NLTT/DAIHOC/OOP/oop-game/include -IC:/SFML/SFML-3.0.0/include -IE:/NLTT/DAIHOC/OOP/oop-game/src
   OBJECT_DIR = CMakeFiles\game.dir
   OBJECT_FILE_DIR = CMakeFiles\game.dir\src
 
@@ -61,7 +77,23 @@ build CMakeFiles/game.dir/src/Enemy.cpp.obj: CXX_COMPILER__game_unscanned_Debug 
   CONFIG = Debug
   DEP_FILE = CMakeFiles\game.dir\src\Enemy.cpp.obj.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -IC:/SFML/SFML-3.0.0/include -IE:/NLTT/DAIHOC/OOP/oop-game/src
+  INCLUDES = -IE:/NLTT/DAIHOC/OOP/oop-game/include -IC:/SFML/SFML-3.0.0/include -IE:/NLTT/DAIHOC/OOP/oop-game/src
+  OBJECT_DIR = CMakeFiles\game.dir
+  OBJECT_FILE_DIR = CMakeFiles\game.dir\src
+
+build CMakeFiles/game.dir/src/GameObject.cpp.obj: CXX_COMPILER__game_unscanned_Debug E$:/NLTT/DAIHOC/OOP/oop-game/src/GameObject.cpp || cmake_object_order_depends_target_game
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\game.dir\src\GameObject.cpp.obj.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -IE:/NLTT/DAIHOC/OOP/oop-game/include -IC:/SFML/SFML-3.0.0/include -IE:/NLTT/DAIHOC/OOP/oop-game/src
+  OBJECT_DIR = CMakeFiles\game.dir
+  OBJECT_FILE_DIR = CMakeFiles\game.dir\src
+
+build CMakeFiles/game.dir/src/MineTrap.cpp.obj: CXX_COMPILER__game_unscanned_Debug E$:/NLTT/DAIHOC/OOP/oop-game/src/MineTrap.cpp || cmake_object_order_depends_target_game
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\game.dir\src\MineTrap.cpp.obj.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -IE:/NLTT/DAIHOC/OOP/oop-game/include -IC:/SFML/SFML-3.0.0/include -IE:/NLTT/DAIHOC/OOP/oop-game/src
   OBJECT_DIR = CMakeFiles\game.dir
   OBJECT_FILE_DIR = CMakeFiles\game.dir\src
 
@@ -69,15 +101,15 @@ build CMakeFiles/game.dir/src/Player.cpp.obj: CXX_COMPILER__game_unscanned_Debug
   CONFIG = Debug
   DEP_FILE = CMakeFiles\game.dir\src\Player.cpp.obj.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -IC:/SFML/SFML-3.0.0/include -IE:/NLTT/DAIHOC/OOP/oop-game/src
+  INCLUDES = -IE:/NLTT/DAIHOC/OOP/oop-game/include -IC:/SFML/SFML-3.0.0/include -IE:/NLTT/DAIHOC/OOP/oop-game/src
   OBJECT_DIR = CMakeFiles\game.dir
   OBJECT_FILE_DIR = CMakeFiles\game.dir\src
 
-build CMakeFiles/game.dir/src/PlayerBullet.cpp.obj: CXX_COMPILER__game_unscanned_Debug E$:/NLTT/DAIHOC/OOP/oop-game/src/PlayerBullet.cpp || cmake_object_order_depends_target_game
+build CMakeFiles/game.dir/src/TankEnemy.cpp.obj: CXX_COMPILER__game_unscanned_Debug E$:/NLTT/DAIHOC/OOP/oop-game/src/TankEnemy.cpp || cmake_object_order_depends_target_game
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\game.dir\src\PlayerBullet.cpp.obj.d
+  DEP_FILE = CMakeFiles\game.dir\src\TankEnemy.cpp.obj.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -IC:/SFML/SFML-3.0.0/include -IE:/NLTT/DAIHOC/OOP/oop-game/src
+  INCLUDES = -IE:/NLTT/DAIHOC/OOP/oop-game/include -IC:/SFML/SFML-3.0.0/include -IE:/NLTT/DAIHOC/OOP/oop-game/src
   OBJECT_DIR = CMakeFiles\game.dir
   OBJECT_FILE_DIR = CMakeFiles\game.dir\src
 
@@ -89,7 +121,7 @@ build CMakeFiles/game.dir/src/PlayerBullet.cpp.obj: CXX_COMPILER__game_unscanned
 #############################################
 # Link the executable game.exe
 
-build game.exe: CXX_EXECUTABLE_LINKER__game_Debug CMakeFiles/game.dir/src/Bullet.cpp.obj CMakeFiles/game.dir/src/Enemy.cpp.obj CMakeFiles/game.dir/src/Player.cpp.obj CMakeFiles/game.dir/src/PlayerBullet.cpp.obj
+build game.exe: CXX_EXECUTABLE_LINKER__game_Debug CMakeFiles/game.dir/src/AirPlane.cpp.obj CMakeFiles/game.dir/src/ArmoredTank.cpp.obj CMakeFiles/game.dir/src/Bullet.cpp.obj CMakeFiles/game.dir/src/Enemy.cpp.obj CMakeFiles/game.dir/src/GameObject.cpp.obj CMakeFiles/game.dir/src/MineTrap.cpp.obj CMakeFiles/game.dir/src/Player.cpp.obj CMakeFiles/game.dir/src/TankEnemy.cpp.obj
   CONFIG = Debug
   FLAGS = -g
   LINK_LIBRARIES = -lsfml-graphics  -lsfml-window  -lsfml-system  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32

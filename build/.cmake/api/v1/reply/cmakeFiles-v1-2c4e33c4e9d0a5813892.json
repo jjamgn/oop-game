@@ -5,10 +5,14 @@
 			"expression" : "E:/NLTT/DAIHOC/OOP/oop-game/src/*.cpp",
 			"paths" : 
 			[
+				"E:/NLTT/DAIHOC/OOP/oop-game/src/AirPlane.cpp",
+				"E:/NLTT/DAIHOC/OOP/oop-game/src/ArmoredTank.cpp",
 				"E:/NLTT/DAIHOC/OOP/oop-game/src/Bullet.cpp",
 				"E:/NLTT/DAIHOC/OOP/oop-game/src/Enemy.cpp",
+				"E:/NLTT/DAIHOC/OOP/oop-game/src/GameObject.cpp",
+				"E:/NLTT/DAIHOC/OOP/oop-game/src/MineTrap.cpp",
 				"E:/NLTT/DAIHOC/OOP/oop-game/src/Player.cpp",
-				"E:/NLTT/DAIHOC/OOP/oop-game/src/PlayerBullet.cpp"
+				"E:/NLTT/DAIHOC/OOP/oop-game/src/TankEnemy.cpp"
 			],
 			"recurse" : true
 		}

@@ -1,20 +1,20 @@
 #ifndef Player_h
 #define Player_h
 
+#include <iostream>
 #include <SFML/Graphics.hpp>
 #include <algorithm>
+#include <cmath>
 #include <vector>
+#include "GameObject.h"
 #include "Enemy.h"
+#include <Bullet.h>
 
 using namespace std;
 
-class Player {
+class Player: public GameObject {
 private: 
-    int hp;
-    int maxHp;
-    float speed; //Doi kieu du lieu, trong UML la int
-    sf::Vector2f position;
-    sf::Sprite image;
+    const int maxHp;
     float shootCooldown; //Thoi gian cho giua 2 lan ban
     float shootTimer; //Dem thoi gian de co the ban tiep
     float skillCooldown; //Thoi gian cho giua 2 lan ki nang
@@ -24,19 +24,18 @@ private:
     float invincibleTimer; //Dem thoi gian trong trang thai bat tu
 
 public:
-    Player(sf::Texture& texture); //Do image khong co default constructor, phai duoc gan một sf::Texture, 
-    ~Player();
-    int getHp() const;
-    sf::Vector2f getPosition() const;
-    float getSkillCooldownTimer() const; //Doi ten, ten cu trong UML la getCooldownTimer
-    void update(float deltaTime);
+    Player(const shared_ptr<sf::Texture>& tex); 
+    ~Player() override = default;
+    void update(float deltaTime) override;
+    void draw(sf::RenderWindow& window) override;
+    void takeDamage(int damage) override;
+    bool isAlive() const override;
+    float getSkillCooldownTimer() const { return this->skillTimer; }; //Doi ten, ten cu trong UML la getCooldownTimer
     void move(float deltaTime, int direction); //direction = -1: trai, = 1: phai
-    void shoot();
-    void takeDamage();
+    void shoot(); //Tao dan thuong
     bool isSkillReady();
     void useSkill(vector<Enemy*>& enemies);
-    void draw(sf::RenderWindow &window);
-    bool isAlive();
+    
 };
 
 #endif
