@@ -1,26 +1,39 @@
 #include "Enemy.h"
 
-Enemy::Enemy(const shared_ptr<sf::Texture>& tex): GameObject(tex) {}
+Enemy::Enemy(const std::shared_ptr<sf::Texture>& tex): texture(tex), sprite(*texture) {
+    sprite.setOrigin(sf::Vector2f(texture->getSize().x / 2.f, texture->getSize().y / 2.f)); //Dat goc toa do tai tam anh
+}
 
 void Enemy::update(float deltaTime) {
     if (!isAlive()) return;
-    if (shootTimer < shootCooldown)
-        shootTimer += deltaTime;
     move(deltaTime);
+    shootTimer = std::min(shootTimer + deltaTime, shootCooldown);
+    if (canShoot()) {
+        shoot();
+        shootTimer = 0.0f;
+    }
 }
 
 void Enemy::draw(sf::RenderWindow& window) {
-    if (isAlive()) {
-        window.draw(sprite);
-    }
+    window.draw(sprite);
 }
 
 void Enemy::takeDamage(int damage) {
-    if (!isAlive()) return;
     hp -= damage;
-    if (hp <= 0) {
-        hp = 0;
-        isActive = false;
-    }
+    sprite.setColor(sf::Color::Red);
+    if (hp < 0) hp = 0;
 }
+
+void Enemy::setPosition(float x, float y) {
+    position = sf::Vector2f(x, y);
+    sprite.setPosition(position);
+}
+
+void Enemy::setSpeed(float newSpeed) {
+    speed = newSpeed;
+}
+
+
+
+
 

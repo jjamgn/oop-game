@@ -4,12 +4,14 @@
 # SRC_FILES at CMakeLists.txt:12 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "E:/NLTT/DAIHOC/OOP/oop-game/src/*.cpp")
 set(OLD_GLOB
-  "E:/NLTT/DAIHOC/OOP/oop-game/src/AirPlane.cpp"
+  "E:/NLTT/DAIHOC/OOP/oop-game/src/AirCraft.cpp"
   "E:/NLTT/DAIHOC/OOP/oop-game/src/ArmoredTank.cpp"
   "E:/NLTT/DAIHOC/OOP/oop-game/src/Bullet.cpp"
   "E:/NLTT/DAIHOC/OOP/oop-game/src/Enemy.cpp"
   "E:/NLTT/DAIHOC/OOP/oop-game/src/GameObject.cpp"
+  "E:/NLTT/DAIHOC/OOP/oop-game/src/HandleInput.cpp"
   "E:/NLTT/DAIHOC/OOP/oop-game/src/MineTrap.cpp"
+  "E:/NLTT/DAIHOC/OOP/oop-game/src/Plane.cpp"
   "E:/NLTT/DAIHOC/OOP/oop-game/src/Player.cpp"
   "E:/NLTT/DAIHOC/OOP/oop-game/src/TankEnemy.cpp"
   )

@@ -7,9 +7,9 @@
 
 class MineTrap: public Enemy {
 public:
-    MineTrap(const shared_ptr<sf::Texture>& tex);
-    void update(float deltaTime) override;
-    void move(float deltaTime) override;  
+    MineTrap(const std::shared_ptr<sf::Texture>& tex);
+    ~MineTrap() = default;
+    void move(float deltaTime) override; //Di chuyen thang
     void shoot() override {};            
 };
 

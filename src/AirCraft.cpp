@@ -1,28 +1,26 @@
-//Can chinh lai constructor
+//Xu li ham shoot() + lazerWarning, dung spawner???
 
 #include "AirCraft.h"
 
-AirCraft::AirCraft(const std::shared_ptr<sf::Texture>& tex): Enemy(tex) { //Khai bao tam thoi
-    hp = 150;
-    scoreValue = 1000;
+AirCraft::AirCraft(const std::shared_ptr<sf::Texture>& tex): Enemy(tex) { 
+    hp = AirCraftHP;
     fireCooldown = 0.0f; 
-    fireTimer = 0.f;
+    fireTimer = 0.0f;
     spawnCooldown = 0.0f;  
-    spawnTimer = 0.f;
+    spawnTimer = 0.0f;
     isLazerWarning = false;
-    lazerWarningTimer = 0.f;
-    position.y = 100.f; 
-    sprite.setPosition(position);
-    lazerWarningLine.setSize(sf::Vector2f(1.f, 1.f)); 
-    lazerWarningLine.setFillColor(sf::Color(255,0,0,120));
-    lazerWarningLine.setPosition(position.x, position.y + sprite.getGlobalBounds().height);
+    lazerWarningTimer = 0.0f;
+    sprite.setPosition(AirCraftStartPosition);
+    lazerWarningLine.setSize(SizeLazerWarningLine); 
+    lazerWarningLine.setFillColor(ColorLazerWarningLine);
+    lazerWarningLine.setPosition(sf::Vector2f(position.x, position.y + sprite.getGlobalBounds().size.y / 2.0f));
 }
 
 void AirCraft::update(float deltaTime) {
     sprite.setPosition(position);
-    if (hp <= 45) { //Duoi 30% mau, ban dau la 150
-        fireCooldown = 1.2f; //Toc do nhanh hon
-        spawnCooldown = 2.5f;
+    if (hp <= 0.3*AirCraftHP) { //Duoi 30% mau
+        fireCooldown *= 1.5f; //Toc do nhanh hon
+        spawnCooldown *= 1.5f;
     }
     if (isLazerWarning) { //Khi co lazer canh bao
         lazerWarningTimer -= deltaTime;
@@ -36,11 +34,10 @@ void AirCraft::update(float deltaTime) {
             int t = rand() % 6; //Chon random enemy
             if (t == 0) {
                 pendingFire = BossFireType::LAZER;
-                // Bắt đầu cảnh báo
-                lazerWarningTimer = 5.0f; // Cảnh báo 5s
+                lazerWarningTimer = 5.0f; //Bat dau canh bao 5s
                 isLazerWarning = true;
-                float relX = position.x + rand() % static_cast<int>(sprite.getGlobalBounds().width); //Random vi tri tha enemy
-                lazerWarningLine.setPosition(relX, position.y + sprite.getGlobalBounds().height); //Canh bao
+                float relX = position.x + rand() % static_cast<int>(sprite.getGlobalBounds().size.x); //Random vi tri tha enemy
+                lazerWarningLine.setPosition(sf::Vector2f(relX, position.y + sprite.getGlobalBounds().size.y)); //Canh bao
             } else if (t <= 2) {
                 pendingFire = BossFireType::TRIPLE;
                 shoot();
@@ -68,7 +65,7 @@ void AirCraft::draw(sf::RenderWindow &window) {
 
 void AirCraft::shoot() {
     if (pendingFire == BossFireType::SINGLE) {
-        //Goi GameManager.createBossBullet(position, ...); ...
+        //Goi tao dan...
     }
     if (pendingFire == BossFireType::TRIPLE) {
         //Goi tao dan...
@@ -78,15 +75,11 @@ void AirCraft::shoot() {
     }
 }
 
-void AirCraft::takeDamage(int damage) {
-    Enemy::takeDamage(damage);
-}
-
 bool AirCraft::shouldSpawnMinion() const {
-    return (hp <= 45);
+    return (hp <= 0.3*AirCraftHP);
 }
 
-string AirCraft::getRandomMinionType() const { //Tao ngau nhien quan phu
+std::string AirCraft::getRandomMinionType() const { //Tao ngau nhien quan phu
     int t = rand() % 3;
     if (t == 0) return "TankEnemy";
     if (t == 1) return "ArmoredTank";

@@ -6,36 +6,48 @@
 #include <algorithm>
 #include <cmath>
 #include <vector>
-#include "GameObject.h"
 #include "Enemy.h"
-#include <Bullet.h>
+#include "Bullet.h"
+#include "GameConfig.h"
 
-using namespace std;
 
-class Player: public GameObject {
+class Player {
 private: 
-    const int maxHp;
-    float shootCooldown; //Thoi gian cho giua 2 lan ban
-    float shootTimer; //Dem thoi gian de co the ban tiep
-    float skillCooldown; //Thoi gian cho giua 2 lan ki nang
-    float skillTimer; //Dem thoi gian de co the dung ki nang tiep
-    bool isInvincible; //Trang thai bat tu (sau khi bi ban)
-    float invincibleDuration; //Thoi gian bat tu (theo file ban dau la 3s)
-    float invincibleTimer; //Dem thoi gian trong trang thai bat tu
+    std::shared_ptr<sf::Texture> texture; //Dung shared_ptr vi cac bullet/explosion dung chung texture
+    sf::Sprite sprite; 
+    sf::Vector2f position;
+    float speed = PlayerSpeed; //pixel/s
+    int hp; 
+    const int maxHp = 3;
+    //Ban thuong
+    float shootCooldown = PlayerShootCooldown; //Thoi gian cho giua 2 lan ban
+    float shootTimer = 0.0f; //Dem thoi gian de co the ban tiep
+    //Skill
+    float skillCooldown = PlayerSkillCooldown; //Thoi gian cho giua 2 lan ki nang
+    float skillTimer = 0.0f; //Dem thoi gian de co the dung ki nang tiep
+    bool isInvincible = false; //Trang thai bat tu (sau khi bi ban)
+    float invincibleDuration = PlayerInvincibleTime; //Thoi gian bat tu (theo file ban dau la 3s)
+    float invincibleTimer = 0.0f; //Dem thoi gian trong trang thai bat tu
 
 public:
-    Player(const shared_ptr<sf::Texture>& tex); 
-    ~Player() override = default;
-    void update(float deltaTime) override;
-    void draw(sf::RenderWindow& window) override;
-    void takeDamage(int damage) override;
-    bool isAlive() const override;
-    float getSkillCooldownTimer() const { return this->skillTimer; }; //Doi ten, ten cu trong UML la getCooldownTimer
+    Player(const std::shared_ptr<sf::Texture>& tex); 
+    ~Player() = default;
+    void update(float deltaTime); 
+    void draw(sf::RenderWindow& window);
+
     void move(float deltaTime, int direction); //direction = -1: trai, = 1: phai
     void shoot(); //Tao dan thuong
-    bool isSkillReady();
-    void useSkill(vector<Enemy*>& enemies);
+    void useSkill(std::vector<Enemy*>& enemies);
+
+    void takeDamage();
+    bool isAlive() const;
+    bool isSkillReady() const;
+    sf::FloatRect getBounds() const; //Tra ve thong tin vi tri, kich thuoc de xu ly va cham
     
+    void setPosition(float x, float y); //Dung float thay int x, int y
+    sf::Vector2f getPosition() const;
+    int getHp() const;
+    float getSkillCooldownTimer() const; //Doi ten, ten cu trong UML la getCooldownTimer  
 };
 
 #endif

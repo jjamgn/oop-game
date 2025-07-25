@@ -1,19 +1,25 @@
+//Ham shoot?
+
 #include "ArmoredTank.h"
 #include "GameConfig.h"
 
-void ArmoredTank::update(float deltaTime) {
-    Enemy::update(deltaTime);
-    if (canShoot()) { //Ban
-        shoot();
-        shootTimer = 0.0f; //Reset
-    }
+ArmoredTank::ArmoredTank(const std::shared_ptr<sf::Texture>& tex): Enemy(tex) {
+    sprite.setScale(ArmoredTankScale); //Dat scale
+    speed = ArmoredTankSpeed;
+    hp = ArmoredTankHP;
+    shootCooldown = ArmoredTankShootCooldown;
+    shootTimer = 0.0f;
 }
 
 void ArmoredTank::move(float deltaTime) {
-    position.y += getSpeed() * deltaTime;
+    position.x += speed * direction * deltaTime;
+    position.y += speed * deltaTime * 0.3f;
     sprite.setPosition(position);
-    if (position.y > screenHeight) {
-        isActive = false;
+    if (position.y > screenHeight + getBounds().size.y / 2.0f) { //Ra khoi man hinh
+        hp = 0;
+    }
+    if (position.x <= getBounds().size.x / 2.0f || position.x >= screenWidth - getBounds().size.x) {
+        direction *= -1.0f;
     }
 }
 
@@ -26,9 +32,3 @@ void ArmoredTank::shoot() {
     }
 }
 
-void ArmoredTank::takeDamage(int damage) {
-    Enemy::takeDamage(damage);
-    if (!isAlive()) {
-        //Hieu ung no
-    }
-}

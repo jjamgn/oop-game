@@ -3,11 +3,10 @@
 
 class TankEnemy: public Enemy {
 public:
-    TankEnemy(const shared_ptr<sf::Texture>& tex);
-    void update(float deltaTime) override;
-    void move(float deltaTime) override;
+    TankEnemy(const std::shared_ptr<sf::Texture>& tex);
+    ~TankEnemy() = default;
+    void move(float deltaTime) override; //Di thang
     void shoot() override;
-    void takeDamage(int damage) override;
 };
 
 #endif

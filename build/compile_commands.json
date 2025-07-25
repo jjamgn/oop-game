@@ -1,9 +1,9 @@
 [
 {
   "directory": "E:/NLTT/DAIHOC/OOP/oop-game/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IE:/NLTT/DAIHOC/OOP/oop-game/include -IC:/SFML/SFML-3.0.0/include -IE:/NLTT/DAIHOC/OOP/oop-game/src -g -std=gnu++17 -o CMakeFiles\\game.dir\\src\\AirPlane.cpp.obj -c E:\\NLTT\\DAIHOC\\OOP\\oop-game\\src\\AirPlane.cpp",
-  "file": "E:\\NLTT\\DAIHOC\\OOP\\oop-game\\src\\AirPlane.cpp",
-  "output": "CMakeFiles\\game.dir\\src\\AirPlane.cpp.obj"
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IE:/NLTT/DAIHOC/OOP/oop-game/include -IC:/SFML/SFML-3.0.0/include -IE:/NLTT/DAIHOC/OOP/oop-game/src -g -std=gnu++17 -o CMakeFiles\\game.dir\\src\\AirCraft.cpp.obj -c E:\\NLTT\\DAIHOC\\OOP\\oop-game\\src\\AirCraft.cpp",
+  "file": "E:\\NLTT\\DAIHOC\\OOP\\oop-game\\src\\AirCraft.cpp",
+  "output": "CMakeFiles\\game.dir\\src\\AirCraft.cpp.obj"
 },
 {
   "directory": "E:/NLTT/DAIHOC/OOP/oop-game/build",
@@ -31,9 +31,21 @@
 },
 {
   "directory": "E:/NLTT/DAIHOC/OOP/oop-game/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IE:/NLTT/DAIHOC/OOP/oop-game/include -IC:/SFML/SFML-3.0.0/include -IE:/NLTT/DAIHOC/OOP/oop-game/src -g -std=gnu++17 -o CMakeFiles\\game.dir\\src\\HandleInput.cpp.obj -c E:\\NLTT\\DAIHOC\\OOP\\oop-game\\src\\HandleInput.cpp",
+  "file": "E:\\NLTT\\DAIHOC\\OOP\\oop-game\\src\\HandleInput.cpp",
+  "output": "CMakeFiles\\game.dir\\src\\HandleInput.cpp.obj"
+},
+{
+  "directory": "E:/NLTT/DAIHOC/OOP/oop-game/build",
   "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IE:/NLTT/DAIHOC/OOP/oop-game/include -IC:/SFML/SFML-3.0.0/include -IE:/NLTT/DAIHOC/OOP/oop-game/src -g -std=gnu++17 -o CMakeFiles\\game.dir\\src\\MineTrap.cpp.obj -c E:\\NLTT\\DAIHOC\\OOP\\oop-game\\src\\MineTrap.cpp",
   "file": "E:\\NLTT\\DAIHOC\\OOP\\oop-game\\src\\MineTrap.cpp",
   "output": "CMakeFiles\\game.dir\\src\\MineTrap.cpp.obj"
+},
+{
+  "directory": "E:/NLTT/DAIHOC/OOP/oop-game/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IE:/NLTT/DAIHOC/OOP/oop-game/include -IC:/SFML/SFML-3.0.0/include -IE:/NLTT/DAIHOC/OOP/oop-game/src -g -std=gnu++17 -o CMakeFiles\\game.dir\\src\\Plane.cpp.obj -c E:\\NLTT\\DAIHOC\\OOP\\oop-game\\src\\Plane.cpp",
+  "file": "E:\\NLTT\\DAIHOC\\OOP\\oop-game\\src\\Plane.cpp",
+  "output": "CMakeFiles\\game.dir\\src\\Plane.cpp.obj"
 },
 {
   "directory": "E:/NLTT/DAIHOC/OOP/oop-game/build",

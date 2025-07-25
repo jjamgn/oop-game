@@ -1,4 +1,4 @@
-#ifnder AirCraft_h
+#ifndef AirCraft_h
 #define AirCraft_h
 
 #include <SFML/Graphics.hpp>
@@ -8,7 +8,7 @@
 
 enum class BossFireType {SINGLE, TRIPLE, LAZER}; //Ban 1 vien, 3 vien, lazer
 
-class AirCraft:: public Enemy {
+class AirCraft: public Enemy {
 private:
     float fireCooldown; //Thoi gian giua 2 lan ban
     float fireTimer; //Dem thoi gian den lan ban tiep theo
@@ -18,18 +18,19 @@ private:
     float spawnCooldown; //Thoi gian cho tha them dich
     float spawnTimer; //Dem thoi gian den lan tha tiep theo
     sf::RectangleShape lazerWarningLine; //Canh bao lazer
+
 public:
-    AirCraft(const shared_ptr<sf::Texture>& tex);
+    AirCraft(const std::shared_ptr<sf::Texture>& tex);
+    ~AirCraft() = default;
     void update(float deltaTime) override;
-    void draw(sf::RenderWindow &window) override;
     void move(float deltaTime) override {}; 
+    void draw(sf::RenderWindow &window) override;
     void shoot() override;
-    void takeDamage(int damage) override;
     bool shouldSpawnMinion() const; //Goi de tha quan phu
-    string getRandomMinionType() const; //Ham random tao quan phu
+    std::string getRandomMinionType() const; //Ham random tao quan phu
     bool isLazerCharging() const { return isLazerWarning; } 
     sf::RectangleShape getLazerWarningLine() const { return lazerWarningLine; }
-    bool isBoss() override { return true; }; 
+    bool isBoss() override { return true; }
 };
 
 #endif
