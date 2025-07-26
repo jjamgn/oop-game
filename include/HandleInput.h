@@ -3,20 +3,19 @@
 
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
-#include <map>
+#include "Player.h"
+#include <unordered_map>
 
 class HandleInput {
 private:
-    std::map<sf::Keyboard::Key, bool> keyPressed; //Luu trang thai phim
-    std::map<sf::Mouse::Button, bool> mouseButtonPressed; //Luu trang thai chuot
+    Player* m_Player;
+    std::unordered_map<sf::Keyboard::Key, bool> keyPressed; //Luu trang thai phim
+    std::unordered_map<sf::Mouse::Button, bool> mouseButtonPressed; //Luu trang thai chuot
 
 public:
-    HandleInput();
+    HandleInput(Player* m_Player);
     ~HandleInput() = default;
-    void update();
-    bool isKeyPressed(sf::Keyboard::Key key) const; //Kiem tra ban phim
-    bool isKeyDown(sf::Keyboard::Key key) const;
-    bool isMouseButtonPressed(sf::Mouse::Button button) const; //Kiem tra chuot
+    void update(float deltaTime, std::vector<Enemy*>& enemies);
     sf::Vector2f getMousePosition(const sf::RenderWindow& window) const;
 
 };
